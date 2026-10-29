@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="hi">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>संतोष किराना स्टोर &amp; ताज़ी सब्ज़ियाँ — Santosh Kirana Store</title>
+<meta content="संतोष किराना स्टोर — रोज़मर्रा का किराना, ताज़ी हरी सब्ज़ियाँ और फल अब WhatsApp पर आसानी से ऑर्डर करें।" name="description"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', '"Hind"', 'sans-serif'],
+            hindi: ['"Hind"', '"Plus Jakarta Sans"', 'sans-serif']
+          },
+          colors: {
+            brand: {
+              green: '#15803d',
+              darkgreen: '#0f5127',
+              emerald: '#10b981',
+              lightgreen: '#f0fdf4',
+              accent: '#f59e0b',
+              warm: '#ea580c',
+              earth: '#78350f',
+              surface: '#fcfdfa',
+              card: '#ffffff'
+            }
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    body { font-family: 'Plus Jakarta Sans', 'Hind', sans-serif; background-color: #f8faf6; }
+    .hindi-text { font-family: 'Hind', sans-serif; }
+    .badge-veg { background-color: #ecfdf5; color: #047857; border: 1px solid #a7f3d0; }
+    .badge-kirana { background-color: #fffbeb; color: #b45309; border: 1px solid #fde68a; }
+    .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+    .custom-scrollbar::-webkit-scrollbar-track { background: #f1f5f9; }
+    .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+  </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen flex flex-col selection:bg-emerald-200">
+<!-- Top Announcement Bar -->
+<div class="bg-gradient-to-r from-emerald-800 via-green-800 to-emerald-900 text-white text-xs md:text-sm py-2 px-4 shadow-sm border-b border-emerald-900">
+<div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-amber-400 text-emerald-950 animate-pulse">
+          ⚡ ताज़ा स्टॉक
+        </span>
+<span class="hindi-text font-medium">सीधे खेत से ताज़ी सब्ज़ियाँ &amp; उच्च गुणवत्ता किराना सामान | WhatsApp पर आर्डर भेजें</span>
+</div>
+<div class="flex items-center space-x-4 text-xs">
+<a class="hover:text-amber-300 transition flex items-center gap-1 font-semibold" href="tel:6260274239">
+<i class="fa-solid fa-phone"></i> 6260274239
+        </a>
+<span class="text-emerald-400">|</span>
+<a class="hover:text-green-300 transition flex items-center gap-1 font-medium" href="https://wa.me/916260274239" target="_blank">
+<i class="fa-brands fa-whatsapp text-green-400 text-sm"></i> WhatsApp Support
+        </a>
+</div>
+</div>
+</div>
+<!-- Sticky Main Header -->
+<header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-emerald-100 shadow-sm transition-all">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-20 gap-4">
+<!-- Logo & Brand Name -->
+<a class="flex items-center gap-3 group shrink-0" href="#home">
+<div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-emerald-700 to-green-500 flex items-center justify-center text-white shadow-md shadow-emerald-200 group-hover:scale-105 transition transform">
+<i class="fa-solid fa-basket-shopping text-2xl text-amber-300"></i>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-extrabold text-xl tracking-tight text-emerald-950 hindi-text">संतोष किराना स्टोर</span>
+<span class="hidden sm:inline-block text-[11px] font-bold px-1.5 py-0.5 bg-emerald-100 text-emerald-800 rounded">Fresh</span>
+</div>
+<p class="text-xs text-slate-500 font-medium tracking-wide">किराना &amp; ताज़ी सब्ज़ियाँ • Santosh Kirana</p>
+</div>
+</a>
+<!-- Desktop Navigation Links -->
+<nav class="hidden lg:flex items-center space-x-1 xl:space-x-2 text-sm font-medium text-slate-700 hindi-text">
+<button class="nav-btn px-3 py-2 rounded-lg hover:text-emerald-700 hover:bg-emerald-50 font-semibold transition text-emerald-800 bg-emerald-50/80" onclick="filterCategory('all')">सभी प्रोडक्ट्स</button>
+<button class="nav-btn px-3 py-2 rounded-lg hover:text-emerald-700 hover:bg-emerald-50 transition" onclick="filterCategory('vegetables')">ताज़ी सब्ज़ियाँ</button>
+<button class="nav-btn px-3 py-2 rounded-lg hover:text-emerald-700 hover:bg-emerald-50 transition" onclick="filterCategory('fruits')">फल</button>
+<button class="nav-btn px-3 py-2 rounded-lg hover:text-emerald-700 hover:bg-emerald-50 transition" onclick="filterCategory('grains')">अनाज व दालें</button>
+<button class="nav-btn px-3 py-2 rounded-lg hover:text-emerald-700 hover:bg-emerald-50 transition" onclick="filterCategory('spices')">तेल व मसाले</button>
+<button class="nav-btn px-3 py-2 rounded-lg hover:text-emerald-700 hover:bg-emerald-50 transition" onclick="filterCategory('snacks')">दैनिक खाद्य</button>
+<button class="nav-btn px-3 py-2 rounded-lg hover:text-emerald-700 hover:bg-emerald-50 transition" onclick="filterCategory('household')">घरेलू सामान</button>
+</nav>
+<!-- Right Side: Search, Cart Button & WhatsApp CTA -->
+<div class="flex items-center gap-2 sm:gap-3">
+<!-- Search trigger toggle for mobile or focused bar -->
+<div class="relative hidden md:block w-48 xl:w-64">
+<i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+<input class="w-full bg-slate-100/90 text-sm pl-9 pr-3 py-2 rounded-xl border border-transparent focus:border-emerald-400 focus:bg-white focus:outline-none transition hindi-text text-slate-800 placeholder-slate-400" id="desktopSearch" oninput="handleSearch(this.value)" placeholder="सर्च करें (आलू, दाल, तेल...)" type="text"/>
+</div>
+<!-- Cart Trigger Button with Live Counter -->
+<button class="relative p-2.5 sm:px-4 sm:py-2.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 rounded-xl transition flex items-center gap-2 border border-emerald-200" onclick="toggleCartDrawer(true)">
+<i class="fa-solid fa-cart-shopping text-emerald-700 text-lg"></i>
+<span class="hidden sm:inline font-bold text-sm hindi-text">कार्ट</span>
+<span class="bg-amber-500 text-slate-900 font-extrabold text-xs px-2 py-0.5 rounded-full shadow-sm min-w-[20px] text-center" id="cartBadge">0</span>
+</button>
+<!-- WhatsApp Quick Action Button -->
+<a class="hidden sm:flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs md:text-sm px-4 py-2.5 rounded-xl shadow-md shadow-emerald-200 transition" href="https://wa.me/916260274239" target="_blank">
+<i class="fa-brands fa-whatsapp text-lg text-emerald-100"></i>
+<span class="hindi-text font-bold">WhatsApp ऑर्डर</span>
+</a>
+<!-- Mobile Hamburger Toggle -->
+<button class="lg:hidden p-2 text-slate-600 hover:text-emerald-700 rounded-lg" onclick="toggleMobileNav()">
+<i class="fa-solid fa-bars text-xl" id="menuIcon"></i>
+</button>
+</div>
+</div>
+<!-- Mobile Search Bar (Always visible on mobile) -->
+<div class="block md:hidden pb-3">
+<div class="relative">
+<i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+<input class="w-full bg-slate-100 text-sm pl-9 pr-8 py-2 rounded-xl border border-slate-200 focus:border-emerald-500 focus:bg-white focus:outline-none transition hindi-text" id="mobileSearch" oninput="handleSearch(this.value)" placeholder="सर्च करें (आलू, टमाटर, आटा, तेल...)" type="text"/>
+<button class="hidden absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600" id="clearSearchBtn" onclick="clearSearch()">
+<i class="fa-solid fa-circle-xmark"></i>
+</button>
+</div>
+</div>
+<!-- Mobile Dropdown Navigation Menu -->
+<div class="hidden lg:hidden border-t border-slate-200 py-3 space-y-1 hindi-text" id="mobileNavMenu">
+<div class="grid grid-cols-2 gap-2 text-sm font-medium">
+<button class="text-left px-3 py-2 rounded-lg bg-emerald-50 text-emerald-800 font-bold" onclick="filterCategory('all'); toggleMobileNav()">सभी प्रोडक्ट्स</button>
+<button class="text-left px-3 py-2 rounded-lg hover:bg-emerald-50 text-slate-700" onclick="filterCategory('vegetables'); toggleMobileNav()">🥬 ताज़ी सब्ज़ियाँ</button>
+<button class="text-left px-3 py-2 rounded-lg hover:bg-emerald-50 text-slate-700" onclick="filterCategory('fruits'); toggleMobileNav()">🍎 ताज़े फल</button>
+<button class="text-left px-3 py-2 rounded-lg hover:bg-emerald-50 text-slate-700" onclick="filterCategory('grains'); toggleMobileNav()">🌾 अनाज व दालें</button>
+<button class="text-left px-3 py-2 rounded-lg hover:bg-emerald-50 text-slate-700" onclick="filterCategory('spices'); toggleMobileNav()">🫙 तेल व मसाले</button>
+<button class="text-left px-3 py-2 rounded-lg hover:bg-emerald-50 text-slate-700" onclick="filterCategory('snacks'); toggleMobileNav()">☕ दैनिक खाद्य</button>
+<button class="text-left px-3 py-2 rounded-lg hover:bg-emerald-50 text-slate-700" onclick="filterCategory('household'); toggleMobileNav()">🧼 घरेलू सामान</button>
+<a class="block px-3 py-2 rounded-lg hover:bg-emerald-50 text-slate-700" href="#about" onclick="toggleMobileNav()">ℹ️ दुकान विवरण</a>
+</div>
+<div class="pt-2 flex gap-2">
+<a class="flex-1 py-2 text-center text-sm font-bold text-emerald-800 bg-emerald-100 rounded-lg" href="tel:6260274239">
+<i class="fa-solid fa-phone mr-1"></i> कॉल करें: 6260274239
+          </a>
+<a class="flex-1 py-2 text-center text-sm font-bold text-white bg-green-600 rounded-lg" href="https://wa.me/916260274239" target="_blank">
+<i class="fa-brands fa-whatsapp mr-1"></i> WhatsApp
+          </a>
+</div>
+</div>
+</div>
+</header>
+<!-- Hero Banner -->
+<section class="relative overflow-hidden bg-gradient-to-b from-emerald-900 via-emerald-850 to-emerald-950 text-white py-12 md:py-16" id="home">
+<!-- Decorative background glow -->
+<div class="absolute inset-0 opacity-15 bg-[radial-gradient(#34d399_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none"></div>
+<div class="absolute -top-24 -right-24 w-96 h-96 bg-amber-400/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-24 -left-24 w-96 h-96 bg-emerald-500/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+<!-- Left Content Column -->
+<div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-800/80 border border-emerald-600/60 text-emerald-200 text-xs md:text-sm font-medium shadow-inner">
+<span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+<span class="hindi-text">संतोष किराना &amp; वेजिटेबल मार्ट — आपकी अपनी भरोसेमंद दुकान</span>
+</div>
+<h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight hindi-text">
+            संतोष किराना स्टोर — <br class="hidden sm:inline"/>
+<span class="text-amber-400">किराना भी, ताज़ी सब्ज़ियाँ भी!</span>
+</h1>
+<p class="text-emerald-100/90 text-base md:text-lg max-w-2xl hindi-text leading-relaxed font-normal">
+            रोज़मर्रा का किराना, ताज़ी सब्ज़ियाँ और फल अब एक ही जगह। अपनी पसंद का सामान चुनें और WhatsApp पर ऑर्डर करें।
+          </p>
+<!-- Key Highlights Badges -->
+<div class="grid grid-cols-3 gap-3 pt-1 max-w-lg mx-auto lg:mx-0 text-left hindi-text">
+<div class="bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl p-2.5 text-center">
+<span class="block text-amber-300 font-bold text-base md:text-lg">100% ताज़ा</span>
+<span class="text-[11px] text-emerald-100">सब्ज़ियाँ व फल</span>
+</div>
+<div class="bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl p-2.5 text-center">
+<span class="block text-amber-300 font-bold text-base md:text-lg">उचित दाम</span>
+<span class="text-[11px] text-emerald-100">शुद्ध दालें व मसाले</span>
+</div>
+<div class="bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl p-2.5 text-center">
+<span class="block text-amber-300 font-bold text-base md:text-lg">आसान ऑर्डर</span>
+<span class="text-[11px] text-emerald-100">सीधा WhatsApp पर</span>
+</div>
+</div>
+<!-- Hero Action Buttons -->
+<div class="flex flex-wrap items-center justify-center lg:justify-start gap-3.5 pt-2">
+<a class="bg-amber-400 hover:bg-amber-300 text-slate-900 font-extrabold px-6 py-3.5 rounded-xl shadow-lg shadow-amber-500/20 transition transform hover:-translate-y-0.5 hindi-text text-base flex items-center gap-2" href="#products-section">
+<i class="fa-solid fa-basket-shopping"></i> अभी खरीदें
+            </a>
+<button class="bg-emerald-700/80 hover:bg-emerald-700 border border-emerald-500/60 text-white font-bold px-5 py-3.5 rounded-xl transition hindi-text text-base flex items-center gap-2" onclick="filterCategory('vegetables'); scrollToProducts();">
+              🥬 सब्ज़ियाँ देखें
+            </button>
+<a class="bg-green-600 hover:bg-green-500 text-white font-bold px-5 py-3.5 rounded-xl shadow-md transition hindi-text text-base flex items-center gap-2" href="https://wa.me/916260274239" target="_blank">
+<i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp पर ऑर्डर करें
+            </a>
+</div>
+<!-- Quick Owner Info Notice -->
+<div class="text-xs text-emerald-300/80 flex items-center justify-center lg:justify-start gap-4 pt-1">
+<span><i class="fa-solid fa-phone text-xs mr-1"></i> संपर्क: 6260274239</span>
+<span>•</span>
+<span><i class="fa-solid fa-clock text-xs mr-1"></i> सुबह 7:00 बजे से रात 10:00 बजे तक</span>
+</div>
+</div>
+<!-- Right Visual Showcase Column -->
+<div class="lg:col-span-5 relative">
+<div class="relative mx-auto max-w-md bg-gradient-to-b from-white/15 to-white/5 p-4 rounded-3xl backdrop-blur-md border border-white/20 shadow-2xl">
+<!-- Showcase Image collage simulation -->
+<div class="relative h-72 sm:h-80 rounded-2xl overflow-hidden shadow-inner bg-emerald-950">
+<img alt="Fresh Vegetables &amp; Indian Grocery" class="w-full h-full object-cover object-center filter brightness-95" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20"></div>
+<div class="absolute bottom-4 left-4 right-4 text-white">
+<span class="inline-block px-2.5 py-1 bg-amber-500 text-slate-950 rounded-lg text-xs font-bold uppercase tracking-wider mb-1">ताज़ा आगमन</span>
+<p class="font-bold text-lg hindi-text">आलू, टमाटर, गोभी, दालें, तेल एवं संपूर्ण किराना</p>
+<p class="text-xs text-slate-200">100% शुद्धता व सर्वोत्तम गुणवत्ता की गारंटी</p>
+</div>
+</div>
+<!-- Floating feature cards -->
+<div class="absolute -bottom-5 -left-5 bg-white text-slate-900 px-4 py-2.5 rounded-2xl shadow-xl border border-emerald-100 flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center text-lg">
+<i class="fa-solid fa-weight-scale"></i>
+</div>
+<div>
+<span class="block text-xs font-bold text-slate-500">वज़न विकल्प</span>
+<span class="text-xs font-extrabold text-emerald-900 hindi-text">250g, 500g, 1kg उपलब्ध</span>
+</div>
+</div>
+<div class="absolute -top-4 -right-4 bg-white text-slate-900 px-4 py-2 rounded-2xl shadow-xl border border-emerald-100 flex items-center gap-2">
+<i class="fa-brands fa-whatsapp text-2xl text-green-600"></i>
+<div>
+<span class="text-[11px] font-bold text-slate-500 block">तुरंत कनेक्ट</span>
+<span class="text-xs font-extrabold text-green-800">One-Click Order</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Category Shortcut Cards Banner -->
+<section class="py-6 bg-white border-b border-slate-200">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-lg font-bold text-slate-900 hindi-text flex items-center gap-2">
+<i class="fa-solid fa-layer-group text-emerald-600"></i> मुख्य श्रेणियां (Categories)
+        </h2>
+<span class="text-xs text-slate-500 hindi-text">अपनी पसंद अनुसार फ़िल्टर करें</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 hindi-text">
+<button class="flex flex-col items-center p-3 rounded-2xl bg-emerald-50/70 hover:bg-emerald-100/80 border border-emerald-100 transition group text-center" onclick="filterCategory('vegetables'); scrollToProducts();">
+<div class="w-12 h-12 rounded-xl bg-white text-2xl flex items-center justify-center mb-2 shadow-sm group-hover:scale-110 transition">
+            🥬
+          </div>
+<span class="text-xs font-bold text-emerald-950">ताज़ी सब्ज़ियाँ</span>
+<span class="text-[10px] text-emerald-700">25+ किस्में</span>
+</button>
+<button class="flex flex-col items-center p-3 rounded-2xl bg-rose-50/70 hover:bg-rose-100/80 border border-rose-100 transition group text-center" onclick="filterCategory('fruits'); scrollToProducts();">
+<div class="w-12 h-12 rounded-xl bg-white text-2xl flex items-center justify-center mb-2 shadow-sm group-hover:scale-110 transition">
+            🍎
+          </div>
+<span class="text-xs font-bold text-rose-950">ताज़े फल</span>
+<span class="text-[10px] text-rose-700">सेब, केला, अनार</span>
+</button>
+<button class="flex flex-col items-center p-3 rounded-2xl bg-amber-50/70 hover:bg-amber-100/80 border border-amber-100 transition group text-center" onclick="filterCategory('grains'); scrollToProducts();">
+<div class="w-12 h-12 rounded-xl bg-white text-2xl flex items-center justify-center mb-2 shadow-sm group-hover:scale-110 transition">
+            🌾
+          </div>
+<span class="text-xs font-bold text-amber-950">अनाज और दालें</span>
+<span class="text-[10px] text-amber-700">आटा, चावल, दाल</span>
+</button>
+<button class="flex flex-col items-center p-3 rounded-2xl bg-orange-50/70 hover:bg-orange-100/80 border border-orange-100 transition group text-center" onclick="filterCategory('spices'); scrollToProducts();">
+<div class="w-12 h-12 rounded-xl bg-white text-2xl flex items-center justify-center mb-2 shadow-sm group-hover:scale-110 transition">
+            🫙
+          </div>
+<span class="text-xs font-bold text-orange-950">तेल और मसाले</span>
+<span class="text-[10px] text-orange-700">सरसों तेल, घी, मसाले</span>
+</button>
+<button class="flex flex-col items-center p-3 rounded-2xl bg-blue-50/70 hover:bg-blue-100/80 border border-blue-100 transition group text-center" onclick="filterCategory('snacks'); scrollToProducts();">
+<div class="w-12 h-12 rounded-xl bg-white text-2xl flex items-center justify-center mb-2 shadow-sm group-hover:scale-110 transition">
+            ☕
+          </div>
+<span class="text-xs font-bold text-blue-950">स्नैक्स &amp; पेय</span>
+<span class="text-[10px] text-blue-700">चाय, बिस्कुट, नूडल्स</span>
+</button>
+<button class="flex flex-col items-center p-3 rounded-2xl bg-purple-50/70 hover:bg-purple-100/80 border border-purple-100 transition group text-center" onclick="filterCategory('household'); scrollToProducts();">
+<div class="w-12 h-12 rounded-xl bg-white text-2xl flex items-center justify-center mb-2 shadow-sm group-hover:scale-110 transition">
+            🧼
+          </div>
+<span class="text-xs font-bold text-purple-950">घरेलू सामान</span>
+<span class="text-[10px] text-purple-700">साबुन, डिटर्जेंट</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Main Product Section with Filtering, Searching, and Responsive Grid -->
+<main class="flex-1 py-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full" id="products-section">
+<!-- Controls Header: Category Tabs + Sort + Search Info -->
+<div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm mb-8">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+<!-- Category Filter Buttons Scrollable Container -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 lg:pb-0 custom-scrollbar scroll-smooth">
+<button class="cat-pill active-pill px-4 py-2 rounded-xl text-sm font-bold whitespace-nowrap transition bg-emerald-700 text-white shadow-sm hindi-text" id="btn-all" onclick="filterCategory('all')">
+            सभी प्रोडक्ट्स (<span id="count-all">0</span>)
+          </button>
+<button class="cat-pill px-4 py-2 rounded-xl text-sm font-semibold whitespace-nowrap transition bg-slate-100 hover:bg-slate-200 text-slate-700 hindi-text" id="btn-vegetables" onclick="filterCategory('vegetables')">
+            🥬 ताज़ी सब्ज़ियाँ (<span id="count-vegetables">0</span>)
+          </button>
+<button class="cat-pill px-4 py-2 rounded-xl text-sm font-semibold whitespace-nowrap transition bg-slate-100 hover:bg-slate-200 text-slate-700 hindi-text" id="btn-fruits" onclick="filterCategory('fruits')">
+            🍎 ताज़े फल (<span id="count-fruits">0</span>)
+          </button>
+<button class="cat-pill px-4 py-2 rounded-xl text-sm font-semibold whitespace-nowrap transition bg-slate-100 hover:bg-slate-200 text-slate-700 hindi-text" id="btn-grains" onclick="filterCategory('grains')">
+            🌾 अनाज व दालें (<span id="count-grains">0</span>)
+          </button>
+<button class="cat-pill px-4 py-2 rounded-xl text-sm font-semibold whitespace-nowrap transition bg-slate-100 hover:bg-slate-200 text-slate-700 hindi-text" id="btn-spices" onclick="filterCategory('spices')">
+            🫙 तेल व मसाले (<span id="count-spices">0</span>)
+          </button>
+<button class="cat-pill px-4 py-2 rounded-xl text-sm font-semibold whitespace-nowrap transition bg-slate-100 hover:bg-slate-200 text-slate-700 hindi-text" id="btn-snacks" onclick="filterCategory('snacks')">
+            ☕ स्नैक्स &amp; खाद्य (<span id="count-snacks">0</span>)
+          </button>
+<button class="cat-pill px-4 py-2 rounded-xl text-sm font-semibold whitespace-nowrap transition bg-slate-100 hover:bg-slate-200 text-slate-700 hindi-text" id="btn-household" onclick="filterCategory('household')">
+            🧼 घरेलू उत्पाद (<span id="count-household">0</span>)
+          </button>
+</div>
+<!-- Sort & Filter Status -->
+<div class="flex items-center justify-between sm:justify-end gap-3 pt-2 lg:pt-0 border-t lg:border-t-0 border-slate-100">
+<div class="flex items-center gap-2 text-xs font-semibold text-slate-500">
+<span class="hindi-text">मूल्य क्रम:</span>
+<select class="bg-slate-100 border border-slate-200 rounded-lg px-2.5 py-1.5 text-xs text-slate-700 font-medium focus:outline-none focus:border-emerald-500 hindi-text" id="priceSort" onchange="handleSort(this.value)">
+<option value="default">सामान्य (Default)</option>
+<option value="low-to-high">कीमत: कम से ज्यादा (₹ ↑)</option>
+<option value="high-to-low">कीमत: ज्यादा से कम (₹ ↓)</option>
+<option value="name">नाम अनुसार (क-ह)</option>
+</select>
+</div>
+<button class="text-xs text-red-600 hover:text-red-700 font-semibold flex items-center gap-1 hindi-text px-2 py-1.5 rounded-lg hover:bg-red-50 transition" onclick="resetFilters()">
+<i class="fa-solid fa-rotate-left text-[10px]"></i> रीसेट
+          </button>
+</div>
+</div>
+<!-- Live Search / Filter Status Notification -->
+<div class="hidden mt-3 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-600 hindi-text" id="filterStatus">
+<span id="filterStatusText"></span>
+<button class="text-emerald-700 font-bold hover:underline" onclick="clearSearch()">सभी दिखाएं</button>
+</div>
+</div>
+<!-- Active Category Banner & Notice -->
+<div class="mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div>
+<h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 hindi-text" id="currentCategoryTitle">
+          सभी उपलब्ध प्रोडक्ट्स
+        </h2>
+<p class="text-xs text-slate-500 hindi-text mt-0.5">
+          *नोट: सब्ज़ियों एवं फलों के लिए 250 ग्राम, 500 ग्राम अथवा 1 किलो का चयन करें।
+        </p>
+</div>
+<div class="flex items-center gap-2 text-xs text-slate-500">
+<span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+<span>दुकान में स्टॉक उपलब्ध</span>
+</div>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6" id="productGrid">
+<!-- Products will be injected via JavaScript -->
+</div>
+<!-- Empty State for Search / Filters -->
+<div class="hidden text-center py-16 px-4 bg-white rounded-3xl border border-slate-200 mt-4" id="noProductsFound">
+<div class="w-16 h-16 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center text-3xl mx-auto mb-4">
+<i class="fa-solid fa-magnifying-glass"></i>
+</div>
+<h3 class="text-lg font-bold text-slate-800 hindi-text mb-1">कोई प्रोडक्ट नहीं मिला</h3>
+<p class="text-sm text-slate-500 hindi-text mb-4">कृपया अन्य नाम से खोजें अथवा फ़िल्टर हटाकर पुनः प्रयास करें।</p>
+<button class="bg-emerald-700 text-white font-bold px-5 py-2.5 rounded-xl text-sm hindi-text hover:bg-emerald-800 transition" onclick="resetFilters()">
+        सभी प्रोडक्ट्स देखें
+      </button>
+</div>
+</main>
+<!-- Special Promotional Highlights Section -->
+<section class="bg-gradient-to-r from-emerald-50 to-green-50 py-12 border-y border-emerald-100">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center max-w-xl mx-auto mb-8">
+<h2 class="text-2xl font-extrabold text-emerald-950 hindi-text">दुकान की मुख्य विशेषताएं</h2>
+<p class="text-sm text-slate-600 hindi-text mt-1">संतोष किराना स्टोर से क्यों खरीदें?</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-white p-6 rounded-2xl border border-emerald-100 shadow-sm flex items-start gap-4">
+<div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-800 flex items-center justify-center text-2xl shrink-0">
+            🌱
+          </div>
+<div>
+<h3 class="font-bold text-slate-900 hindi-text text-base">रोज़ाना ताज़ी सब्ज़ियाँ</h3>
+<p class="text-xs text-slate-600 hindi-text mt-1">
+              मंडी से सीधी चुनी हुई ताज़ी हरी सब्ज़ियाँ जैसे आलू, टमाटर, प्याज, गोभी, भिंडी और हरी मिर्च।
+            </p>
+</div>
+</div>
+<div class="bg-white p-6 rounded-2xl border border-emerald-100 shadow-sm flex items-start gap-4">
+<div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-800 flex items-center justify-center text-2xl shrink-0">
+            ⚖️
+          </div>
+<div>
+<h3 class="font-bold text-slate-900 hindi-text text-base">सटीक वज़न एवं उचित मूल्य</h3>
+<p class="text-xs text-slate-600 hindi-text mt-1">
+              ईमानदार तौल और किफायती मूल्य। 250 ग्राम से लेकर बल्क ऑर्डर तक आपकी जरूरत के अनुसार।
+            </p>
+</div>
+</div>
+<div class="bg-white p-6 rounded-2xl border border-emerald-100 shadow-sm flex items-start gap-4">
+<div class="w-12 h-12 rounded-2xl bg-green-100 text-green-800 flex items-center justify-center text-2xl shrink-0">
+            💬
+          </div>
+<div>
+<h3 class="font-bold text-slate-900 hindi-text text-base">WhatsApp पर तुरंत संपर्क</h3>
+<p class="text-xs text-slate-600 hindi-text mt-1">
+              बिना किसी परेशानी के अपना लिस्ट WhatsApp पर भेजें। दुकान से पिकअप करें अथवा होम डिलीवरी बात करें।
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Us Section -->
+<section class="py-14 bg-white" id="about">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+<div>
+<div class="inline-block px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full text-xs font-bold hindi-text mb-3">
+            हमारे बारे में • About Us
+          </div>
+<h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 hindi-text leading-tight mb-4">
+            संतोष किराना स्टोर — आपके दैनिक परिवार की भरोसेमंद किराना दुकान
+          </h2>
+<div class="space-y-3 text-slate-600 text-sm hindi-text leading-relaxed">
+<p>
+              संतोष किराना स्टोर एक सम्पूर्ण दैनिक आवश्यकता की दुकान है जहाँ आपको दैनिक रसोई का किराना सामान, शुद्ध दालें, खाद्य तेल, चाय, मसाले और स्नैक्स के साथ-साथ प्रतिदिन खेत व मंडी से आई ताज़ी हरी सब्ज़ियाँ और मौसमी फल उपलब्ध कराए जाते हैं।
+            </p>
+<p>
+              हमारा उद्देश्य स्थानीय ग्राहकों को साफ़-सुथरा, अच्छी गुणवत्ता वाला सामान और ताज़ी सब्ज़ियाँ उचित दरों पर उपलब्ध कराना है। डिजिटल सुविधा के लिए आप इस वेबसाइट के माध्यम से सीधे अपनी पसंद का सामान कार्ट में जोड़कर WhatsApp द्वारा अपना आर्डर भेज सकते हैं।
+            </p>
+</div>
+<!-- Store Details Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+<div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+<span class="block text-xs font-semibold text-slate-500 uppercase tracking-wider">दुकान का पता</span>
+<p class="text-sm font-bold text-slate-800 hindi-text mt-1">
+                संतोष किराना स्टोर, मुख्य बाज़ार (पता अपडेट हेतु उपलब्ध)
+              </p>
+<span class="text-[11px] text-emerald-700 hindi-text font-medium mt-1 block">📌 Editable Store Location</span>
+</div>
+<div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+<span class="block text-xs font-semibold text-slate-500 uppercase tracking-wider">दुकान का समय</span>
+<p class="text-sm font-bold text-slate-800 hindi-text mt-1">
+                सुबह 07:00 AM से रात्रि 10:00 PM
+              </p>
+<span class="text-[11px] text-emerald-700 hindi-text font-medium mt-1 block">सप्ताह के सातों दिन खुला</span>
+</div>
+</div>
+<div class="mt-6 flex flex-wrap items-center gap-3">
+<a class="inline-flex items-center gap-2 bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-sm px-5 py-3 rounded-xl transition shadow-sm" href="tel:6260274239">
+<i class="fa-solid fa-phone"></i> अभी कॉल करें: 6260274239
+            </a>
+<a class="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold text-sm px-5 py-3 rounded-xl transition shadow-sm" href="https://wa.me/916260274239" target="_blank">
+<i class="fa-brands fa-whatsapp"></i> WhatsApp चैट शुरू करें
+            </a>
+</div>
+</div>
+<!-- Store Image and Highlights -->
+<div class="relative">
+<div class="rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-slate-100">
+<img alt="Kirana Store Interior" class="w-full h-80 object-cover object-center" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+</div>
+<div class="absolute -bottom-6 -right-4 bg-white p-4 rounded-2xl shadow-xl border border-slate-200 max-w-xs">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-amber-400 text-slate-900 flex items-center justify-center text-lg font-bold">
+                ₹
+              </div>
+<div>
+<h4 class="text-xs font-bold text-slate-900 hindi-text">उचित और पारदर्शी मूल्य</h4>
+<p class="text-[11px] text-slate-500">हर ग्राहक के लिए निष्पक्ष एवं प्रमाणित तौल</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Instagram Official Connect Section -->
+<section class="py-12 bg-slate-900 text-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="bg-gradient-to-r from-purple-900/60 via-slate-800 to-pink-950/60 border border-slate-700 rounded-3xl p-6 sm:p-10 backdrop-blur-sm">
+<div class="flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-4 text-center md:text-left">
+<div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 flex items-center justify-center text-3xl shadow-lg shrink-0">
+<i class="fa-brands fa-instagram text-white"></i>
+</div>
+<div>
+<span class="text-xs font-bold uppercase tracking-wider text-pink-400">Social Media Connection</span>
+<h3 class="text-2xl font-extrabold text-white hindi-text mt-0.5">हमारे Instagram से जुड़ें</h3>
+<p class="text-xs text-slate-300 hindi-text mt-1">
+                ताज़े ऑफर्स, नए माल की जानकारी और दुकान के अपडेट्स के लिए हमें Instagram पर फॉलो करें।
+              </p>
+<p class="text-xs text-pink-300 font-mono mt-1">@mr_nilesh_nayak_285</p>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-3">
+<a class="inline-flex items-center gap-2.5 bg-gradient-to-r from-pink-600 via-rose-600 to-amber-600 hover:from-pink-500 hover:to-amber-500 text-white font-bold text-sm px-6 py-3.5 rounded-xl shadow-lg transition transform hover:scale-105 hindi-text" href="https://www.instagram.com/mr_nilesh_nayak_285?psln=ZTNxYWE1Z3k3MnVy" target="_blank">
+<i class="fa-brands fa-instagram text-lg"></i> Follow on Instagram
+            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Shopping Cart Drawer (Slide-over Modal) -->
+<div class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden transition-opacity" id="cartDrawerBackdrop" onclick="toggleCartDrawer(false)"></div>
+<div class="fixed top-0 right-0 bottom-0 w-full sm:w-[460px] bg-white z-50 shadow-2xl flex flex-col transform translate-x-full transition-transform duration-300 ease-in-out" id="cartDrawer">
+<!-- Drawer Header -->
+<div class="p-4 sm:p-5 border-b border-slate-200 flex items-center justify-between bg-emerald-900 text-white">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-xl bg-white/10 flex items-center justify-center text-amber-300">
+<i class="fa-solid fa-cart-shopping text-lg"></i>
+</div>
+<div>
+<h3 class="font-bold text-lg hindi-text">आपकी खरीदारी कार्ट</h3>
+<span class="text-xs text-emerald-200 hindi-text"><span id="drawerCartCount">0</span> आइटम्स चुने गए</span>
+</div>
+</div>
+<button class="p-2 text-white/80 hover:text-white rounded-lg hover:bg-white/10 transition" onclick="toggleCartDrawer(false)">
+<i class="fa-solid fa-xmark text-xl"></i>
+</button>
+</div>
+<!-- Drawer Body / Item List -->
+<div class="flex-1 overflow-y-auto p-4 space-y-3 custom-scrollbar" id="cartItemsList">
+<!-- Injected dynamically -->
+</div>
+<!-- Empty Cart State -->
+<div class="hidden flex-1 flex flex-col items-center justify-center p-6 text-center" id="emptyCartView">
+<div class="w-20 h-20 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center text-3xl mb-4">
+<i class="fa-solid fa-basket-shopping"></i>
+</div>
+<h4 class="font-bold text-slate-800 text-base hindi-text">कार्ट अभी खाली है</h4>
+<p class="text-xs text-slate-500 hindi-text mt-1 max-w-xs">
+        कृपया सब्ज़ियाँ, फल या किराना सामान जोड़ें और WhatsApp पर आसानी से आर्डर करें।
+      </p>
+<button class="mt-4 bg-emerald-700 text-white font-bold text-xs px-5 py-2.5 rounded-xl hindi-text hover:bg-emerald-800" onclick="toggleCartDrawer(false); scrollToProducts();">
+        सामान देखना शुरू करें
+      </button>
+</div>
+<!-- Drawer Footer / Checkout Form Trigger -->
+<div class="p-4 sm:p-5 border-t border-slate-200 bg-slate-50 space-y-3" id="cartFooter">
+<!-- Subtotal calculation -->
+<div class="space-y-1.5 text-sm hindi-text">
+<div class="flex justify-between text-slate-600">
+<span>कुल आइटम्स:</span>
+<span class="font-semibold text-slate-800" id="footerItemCount">0</span>
+</div>
+<div class="flex justify-between text-slate-900 font-extrabold text-base pt-1 border-t border-slate-200">
+<span>अनुमानित कुल राशि (Estimated Total):</span>
+<span class="text-emerald-800 text-lg">₹<span id="drawerTotal">0</span></span>
+</div>
+<p class="text-[11px] text-slate-500 leading-tight">
+          *सब्जियों व तौल वाले सामान का अंतिम मूल्य दुकान पर वास्तविक वज़न के अनुसार सत्यापित होगा।
+        </p>
+</div>
+<!-- Action Buttons -->
+<div class="space-y-2 pt-2">
+<button class="w-full bg-emerald-700 hover:bg-emerald-800 text-white font-extrabold py-3.5 px-4 rounded-xl shadow-md transition flex items-center justify-center gap-2 hindi-text text-sm" onclick="openCheckoutModal()">
+<i class="fa-brands fa-whatsapp text-lg text-emerald-200"></i> WhatsApp पर आर्डर भेजें (Checkout)
+        </button>
+<div class="flex gap-2">
+<button class="flex-1 py-2 text-xs font-semibold text-red-600 hover:text-red-700 bg-red-50 hover:bg-red-100 rounded-lg transition hindi-text" onclick="clearCart()">
+<i class="fa-regular fa-trash-can mr-1"></i> कार्ट खाली करें
+          </button>
+<button class="flex-1 py-2 text-xs font-semibold text-slate-700 bg-white border border-slate-300 hover:bg-slate-100 rounded-lg transition hindi-text" onclick="toggleCartDrawer(false)">
+            खरीदारी जारी रखें
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- WhatsApp Checkout Modal -->
+<div class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm hidden flex items-center justify-center p-4" id="checkoutModal">
+<div class="bg-white rounded-3xl max-w-lg w-full overflow-hidden shadow-2xl border border-slate-200 animate-scale-up">
+<!-- Modal Header -->
+<div class="bg-gradient-to-r from-emerald-800 to-green-700 p-4 sm:p-5 text-white flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center text-xl">
+<i class="fa-brands fa-whatsapp text-white"></i>
+</div>
+<div>
+<h3 class="font-extrabold text-base sm:text-lg hindi-text">WhatsApp आर्डर विवरण</h3>
+<span class="text-xs text-emerald-100">संतोष किराना स्टोर को आर्डर भेजें</span>
+</div>
+</div>
+<button class="p-1.5 text-white/80 hover:text-white rounded-lg" onclick="closeCheckoutModal()">
+<i class="fa-solid fa-xmark text-lg"></i>
+</button>
+</div>
+<!-- Checkout Form Content -->
+<form class="p-5 sm:p-6 space-y-4 max-h-[80vh] overflow-y-auto custom-scrollbar" id="whatsappOrderForm" onsubmit="handleSendWhatsAppOrder(event)">
+<!-- Summary Box -->
+<div class="p-3 bg-emerald-50 rounded-xl border border-emerald-200 text-xs hindi-text space-y-1">
+<div class="flex justify-between font-bold text-emerald-950">
+<span>आर्डर सारांश:</span>
+<span>कुल <span id="modalItemCount">0</span> वस्तुएं</span>
+</div>
+<div class="flex justify-between text-emerald-800 font-extrabold text-sm">
+<span>अनुमानित योग:</span>
+<span>₹<span id="modalTotalAmount">0</span></span>
+</div>
+</div>
+<!-- Field: Customer Name -->
+<div>
+<label class="block text-xs font-bold text-slate-700 hindi-text mb-1">
+            ग्राहक का नाम (Your Name) <span class="text-red-500">*</span>
+</label>
+<input class="w-full text-sm px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 text-slate-800 hindi-text" id="custName" placeholder="अपना पूरा नाम दर्ज करें" required="" type="text"/>
+</div>
+<!-- Field: Mobile Number -->
+<div>
+<label class="block text-xs font-bold text-slate-700 hindi-text mb-1">
+            मोबाइल नंबर (Mobile Number) <span class="text-red-500">*</span>
+</label>
+<input class="w-full text-sm px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 text-slate-800" id="custPhone" pattern="[0-9]{10}" placeholder="10 अंकों का मोबाइल नंबर" required="" type="tel"/>
+</div>
+<!-- Field: Delivery Type -->
+<div>
+<label class="block text-xs font-bold text-slate-700 hindi-text mb-1">
+            ऑर्डर प्रकार (Order Preference) <span class="text-red-500">*</span>
+</label>
+<div class="grid grid-cols-2 gap-3 text-xs hindi-text">
+<label class="flex items-center gap-2 p-2.5 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-emerald-50 has-[:checked]:border-emerald-600 has-[:checked]:bg-emerald-50 font-bold">
+<input checked="" class="text-emerald-700 focus:ring-0" name="deliveryType" onchange="toggleAddressField(false)" type="radio" value="दुकान से पिकअप (Self Pickup)"/>
+<span>🏪 दुकान से पिकअप</span>
+</label>
+<label class="flex items-center gap-2 p-2.5 rounded-xl border border-slate-200 bg-slate-50 cursor-pointer hover:bg-emerald-50 has-[:checked]:border-emerald-600 has-[:checked]:bg-emerald-50 font-bold">
+<input class="text-emerald-700 focus:ring-0" name="deliveryType" onchange="toggleAddressField(true)" type="radio" value="होम डिलीवरी (Home Delivery)"/>
+<span>🛵 होम डिलीवरी</span>
+</label>
+</div>
+</div>
+<!-- Field: Address (Conditional) -->
+<div class="hidden" id="addressFieldContainer">
+<label class="block text-xs font-bold text-slate-700 hindi-text mb-1">
+            डिलीवरी का पता (Delivery Address)
+          </label>
+<textarea class="w-full text-sm px-3.5 py-2 rounded-xl border border-slate-300 focus:outline-none focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 text-slate-800 hindi-text" id="custAddress" placeholder="मकान नंबर, गली, मोहल्ला / कॉलोनी का नाम" rows="2"></textarea>
+</div>
+<!-- Field: Extra Notes -->
+<div>
+<label class="block text-xs font-bold text-slate-700 hindi-text mb-1">
+            वैकल्पिक निर्देश (Special Instructions)
+          </label>
+<input class="w-full text-sm px-3.5 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-emerald-600 text-slate-800 hindi-text" id="custNotes" placeholder="उदा. पके टमाटर देना, या 5 बजे तक तैयार रखना" type="text"/>
+</div>
+<!-- Disclaimer as required by requirements -->
+<div class="p-3 bg-amber-50 rounded-xl border border-amber-200 text-[11px] text-amber-900 hindi-text leading-relaxed">
+<i class="fa-solid fa-circle-info mr-1 text-amber-700"></i>
+<strong>सूचना:</strong> यह आर्डर एक अनुरोध है। आर्डर की अंतिम पुष्टि दुकान द्वारा स्टॉक की उपलब्धता, सब्ज़ियों का वास्तविक तौल, सटीक मूल्य और डिलीवरी व्यवस्था के सत्यापन के बाद ही मान्य होगी।
+        </div>
+<!-- Submit Button -->
+<div class="pt-2">
+<button class="w-full bg-green-600 hover:bg-green-700 text-white font-extrabold py-3.5 px-4 rounded-xl shadow-lg transition flex items-center justify-center gap-2 hindi-text text-sm" type="submit">
+<i class="fa-brands fa-whatsapp text-xl"></i> WhatsApp पर आर्डर भेजें
+          </button>
+<p class="text-center text-[10px] text-slate-400 mt-2">
+            बटन दबाने पर आपका WhatsApp 6260274239 पर तैयार मैसेज के साथ खुलेगा।
+          </p>
+</div>
+</form>
+</div>
+</div>
+<!-- Footer Section -->
+<footer class="bg-slate-950 text-slate-300 pt-12 pb-8 border-t border-slate-800 mt-auto">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+<!-- Brand Info -->
+<div class="space-y-3">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 rounded-xl bg-emerald-600 text-amber-300 flex items-center justify-center text-xl">
+<i class="fa-solid fa-basket-shopping"></i>
+</div>
+<span class="font-extrabold text-lg text-white hindi-text">संतोष किराना स्टोर</span>
+</div>
+<p class="text-xs text-slate-400 hindi-text leading-relaxed">
+            दैनिक जीवन के लिए उत्तम किराना, दालें, चावल, तेल, मसाले, साबुन एवं रोज़ाना ताज़ी हरी सब्ज़ियाँ और मौसमी फल।
+          </p>
+<div class="flex items-center gap-3 pt-1">
+<a class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-green-600 flex items-center justify-center text-white text-sm transition" href="https://wa.me/916260274239" target="_blank">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+<a class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-pink-600 flex items-center justify-center text-white text-sm transition" href="https://www.instagram.com/mr_nilesh_nayak_285?psln=ZTNxYWE1Z3k3MnVy" target="_blank">
+<i class="fa-brands fa-instagram"></i>
+</a>
+<a class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-emerald-600 flex items-center justify-center text-white text-sm transition" href="tel:6260274239">
+<i class="fa-solid fa-phone"></i>
+</a>
+</div>
+</div>
+<!-- Quick Links -->
+<div class="hindi-text space-y-2">
+<h4 class="text-sm font-bold text-white uppercase tracking-wider mb-2">महत्वपूर्ण लिंक</h4>
+<ul class="space-y-1.5 text-xs text-slate-400">
+<li><button class="hover:text-emerald-400 transition" onclick="filterCategory('all'); scrollToProducts();">सभी सामान देखें</button></li>
+<li><button class="hover:text-emerald-400 transition" onclick="filterCategory('vegetables'); scrollToProducts();">ताज़ी सब्ज़ियाँ</button></li>
+<li><button class="hover:text-emerald-400 transition" onclick="filterCategory('fruits'); scrollToProducts();">ताज़े फल</button></li>
+<li><button class="hover:text-emerald-400 transition" onclick="filterCategory('grains'); scrollToProducts();">अनाज एवं दालें</button></li>
+<li><button class="hover:text-emerald-400 transition" onclick="filterCategory('spices'); scrollToProducts();">रसोई के मसाले व तेल</button></li>
+</ul>
+</div>
+<!-- Contact & Timings -->
+<div class="hindi-text space-y-2.5">
+<h4 class="text-sm font-bold text-white uppercase tracking-wider mb-2">संपर्क व दुकान समय</h4>
+<p class="text-xs text-slate-300 flex items-center gap-2">
+<i class="fa-solid fa-phone text-emerald-400"></i>
+<a class="hover:underline font-bold" href="tel:6260274239">6260274239</a>
+</p>
+<p class="text-xs text-slate-300 flex items-center gap-2">
+<i class="fa-brands fa-whatsapp text-green-400"></i>
+<a class="hover:underline" href="https://wa.me/916260274239" target="_blank">WhatsApp: 6260274239</a>
+</p>
+<p class="text-xs text-slate-300 flex items-start gap-2">
+<i class="fa-solid fa-clock text-amber-400 mt-0.5"></i>
+<span>सुबह 07:00 AM से रात 10:00 PM (दैनिक)</span>
+</p>
+<p class="text-xs text-slate-400 flex items-start gap-2">
+<i class="fa-solid fa-location-dot text-rose-400 mt-0.5"></i>
+<span>संतोष किराना स्टोर (एडिटेबल पता)</span>
+</p>
+</div>
+<!-- Configurable Location Placeholder -->
+<div>
+<h4 class="text-sm font-bold text-white uppercase tracking-wider mb-2 hindi-text">दुकान का नक्शा</h4>
+<div class="w-full h-32 rounded-xl bg-slate-900 border border-slate-800 flex flex-col items-center justify-center text-center p-3 text-xs text-slate-400">
+<i class="fa-solid fa-map-location-dot text-2xl text-emerald-500 mb-1"></i>
+<span class="hindi-text font-medium">Google Maps Embed Placeholder</span>
+<span class="text-[10px] text-slate-500 mt-0.5">दुकान का सटीक लोकेशन लिंक यहां जोड़ें</span>
+</div>
+</div>
+</div>
+<!-- Copyright & Bottom Bar -->
+<div class="pt-6 border-t border-slate-850 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-2">
+<p class="hindi-text">
+          © 2025 संतोष किराना स्टोर (Santosh Kirana Store). सर्वाधिकार सुरक्षित।
+        </p>
+<p class="text-[11px] text-slate-500">
+          Created for Santosh Kirana Store &amp; Fresh Vegetables
+        </p>
+</div>
+</div>
+</footer>
+<!-- Floating Mobile Quick Order Bar (Bottom Navigation for handhelds) -->
+<div class="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 p-2.5 px-4 shadow-2xl flex items-center justify-between gap-3">
+<button class="flex items-center gap-2 text-slate-800 hindi-text font-bold text-xs py-2 px-3 bg-emerald-50 rounded-xl border border-emerald-200" onclick="toggleCartDrawer(true)">
+<i class="fa-solid fa-cart-shopping text-emerald-700 text-sm"></i>
+<span>कार्ट: ₹<span id="floatingCartTotal">0</span></span>
+<span class="bg-amber-400 text-slate-900 px-1.5 py-0.2 rounded-full text-[10px] font-extrabold" id="floatingCartCount">0</span>
+</button>
+<a class="flex-1 bg-green-600 hover:bg-green-700 text-white font-extrabold py-2 px-3 rounded-xl text-center text-xs hindi-text flex items-center justify-center gap-1.5 shadow-md" href="https://wa.me/916260274239" target="_blank">
+<i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp ऑर्डर
+    </a>
+</div>
+<!-- Toast Notification for Add to Cart -->
+<div class="fixed bottom-20 sm:bottom-6 right-4 sm:right-6 z-50 bg-slate-900 text-white px-4 py-3 rounded-2xl shadow-2xl border border-slate-700 text-xs hindi-text font-medium flex items-center gap-3 transform translate-y-24 opacity-0 transition-all duration-300" id="toast">
+<div class="w-7 h-7 rounded-full bg-emerald-500 text-slate-950 flex items-center justify-center font-bold text-sm">
+      ✓
+    </div>
+<span id="toastMessage">सामान कार्ट में जोड़ दिया गया!</span>
+</div>
+<!-- APPLICATION LOGIC (Vanilla JS with complete data catalog) -->
+<script>
+    // --- REUSABLE PRODUCT CATALOG ---
+    // Shop owner can easily add, edit, or adjust prices and units here.
+    const productsData = [
+      // 1. ताज़ी सब्ज़ियाँ (Vegetables) - with fractional options (250g, 500g, 1kg)
+      { id: 'v1', name: 'आलू (Potato)', hindi: 'आलू', category: 'vegetables', price: 25, unit: 'kg', isWeightItem: true, img: 'https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'v2', name: 'टमाटर (Tomato)', hindi: 'टमाटर', category: 'vegetables', price: 30, unit: 'kg', isWeightItem: true, img: 'https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'v3', name: 'प्याज़ (Onion)', hindi: 'प्याज़', category: 'vegetables', price: 35, unit: 'kg', isWeightItem: true, img: 'https://images.unsplash.com/photo-1618512496248-a07fe83aa8cb?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'v4', name: 'फूलगोभी (Cauliflower)', hindi: 'फूलगोभी', category: 'vegetables', price: 40, unit: 'kg', isWeightItem: true, img: 'https://images.unsplash.com/photo-1568584711075-3d021a7c3ca3?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'v5', name: 'पत्तागोभी (Cabbage)', hindi: 'पत्तागोभी', category: 'vegetables', price: 30, unit: 'kg', isWeightItem: true, img: 'https://images.unsplash.com/photo-1594282486552-05b4d80fbb9f?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'v6', name: 'बैंगन (Eggplant / Brinjal)', hindi: 'बैंगन', category: 'vegetables', price: 35, unit: 'kg', isWeightItem: true, img: 'https://images.unsplash.com/photo-1628773822503-930a84d99434?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'v7', name: 'भिंडी (Ladyfinger / Okra)', hindi: 'भिंडी', category: 'vegetables', price: 50, unit: 'kg', isWeightItem: true, img: 'https://images.unsplash.com/photo-1589927986089-35812388d1f4?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'v8', name: 'लौकी (Bottle Gourd)', hindi: 'लौकी', category: 'vegetables', price: 25, unit: 'kg', isWeightItem: true, img: 'https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'v9', name: 'करेला (Bitter Gourd)', hindi: 'करेला', category: 'vegetables', price: 45, unit: 'kg', isWeightItem: true, img: 'https://images.unsplash.com/photo-1582515073490-39981397c445?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'v10', name: 'खीरा (Cucumber)', hindi: 'खीरा', category: 'vegetables', price: 30, unit: 'kg', isWeightItem: true, img: 'https://images.unsplash.com/photo-1449300079323-02e209d9d3a6?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'v11', name: 'हरी मिर्च (Green Chilli)', hindi: 'हरी मिर्च', category: 'vegetables', price: 80, unit: 'kg', isWeightItem: true, img: 'https://images.unsplash.com/photo-1525607551316-4a8e16d1f9ba?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'v12', name: 'शिमला मिर्च (Capsicum)', hindi: 'शिमला मिर्च', category: 'vegetables', price: 60, unit: 'kg', isWeightItem: true, img: 'https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'v13', name: 'गाजर (Carrot)', hindi: 'गाजर', category: 'vegetables', price: 40, unit: 'kg', isWeightItem: true, img: 'https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'v14', name: 'मूली (Radish)', hindi: 'मूली', category: 'vegetables', price: 25, unit: 'kg', isWeightItem: true, img: 'https://images.unsplash.com/photo-1590779033100-9f60a05a013d?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'v15', name: 'पालक (Spinach)', hindi: 'पालक', category: 'vegetables', price: 30, unit: 'kg', isWeightItem: true, img: 'https://images.unsplash.com/photo-1576045057995-568f588f82fb?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'v16', name: 'मेथी (Fenugreek Leaves)', hindi: 'मेथी', category: 'vegetables', price: 35, unit: 'kg', isWeightItem: true, img: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'v17', name: 'धनिया पत्ती (Coriander Leaves)', hindi: 'धनिया पत्ती', category: 'vegetables', price: 60, unit: 'kg', isWeightItem: true, img: 'https://images.unsplash.com/photo-1514733670139-4d87a1941d55?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'v18', name: 'लहसुन (Garlic)', hindi: 'लहसुन', category: 'vegetables', price: 180, unit: 'kg', isWeightItem: true, img: 'https://images.unsplash.com/photo-1540148426945-6cf22a6b2383?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'v19', name: 'अदरक (Ginger)', hindi: 'अदरक', category: 'vegetables', price: 120, unit: 'kg', isWeightItem: true, img: 'https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'v20', name: 'नींबू (Lemon)', hindi: 'नींबू', category: 'vegetables', price: 10, unit: 'piece', isWeightItem: false, img: 'https://images.unsplash.com/photo-1533082603883-3be825997e20?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'v21', name: 'कद्दू (Pumpkin)', hindi: 'कद्दू', category: 'vegetables', price: 25, unit: 'kg', isWeightItem: true, img: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'v22', name: 'मटर (Green Peas)', hindi: 'मटर', category: 'vegetables', price: 50, unit: 'kg', isWeightItem: true, img: 'https://images.unsplash.com/photo-1587735243615-c03f25aaff15?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'v23', name: 'बीन्स (French Beans)', hindi: 'बीन्स', category: 'vegetables', price: 60, unit: 'kg', isWeightItem: true, img: 'https://images.unsplash.com/photo-1551462147-37885acc36f1?auto=format&fit=crop&w=400&q=75', inStock: true },
+
+      // 2. ताज़े फल (Fresh Fruits)
+      { id: 'f1', name: 'सेब (Apple)', hindi: 'सेब', category: 'fruits', price: 140, unit: 'kg', isWeightItem: true, img: 'https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'f2', name: 'केला (Banana)', hindi: 'केला', category: 'fruits', price: 50, unit: 'dozen', isWeightItem: false, img: 'https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'f3', name: 'संतरा (Orange)', hindi: 'संतरा', category: 'fruits', price: 70, unit: 'kg', isWeightItem: true, img: 'https://images.unsplash.com/photo-1582979512210-99b6a53386f9?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'f4', name: 'अंगूर (Grapes)', hindi: 'अंगूर', category: 'fruits', price: 80, unit: 'kg', isWeightItem: true, img: 'https://images.unsplash.com/photo-1537640538966-79f369143f8f?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'f5', name: 'अनार (Pomegranate)', hindi: 'अनार', category: 'fruits', price: 160, unit: 'kg', isWeightItem: true, img: 'https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'f6', name: 'पपीता (Papaya)', hindi: 'पपीता', category: 'fruits', price: 40, unit: 'kg', isWeightItem: true, img: 'https://images.unsplash.com/photo-1526318472351-c75fcf070305?auto=format&fit=crop&w=400&q=75', inStock: true },
+
+      // 3. अनाज और दालें (Grains & Pulses)
+      { id: 'g1', name: 'गेहूँ का आटा (Wheat Flour)', hindi: 'गेहूँ का आटा', category: 'grains', price: 38, unit: 'kg', isWeightItem: true, img: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'g2', name: 'बासमती चावल (Basmati Rice)', hindi: 'चावल', category: 'grains', price: 85, unit: 'kg', isWeightItem: true, img: 'https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'g3', name: 'पोहा (Poha)', hindi: 'पोहा', category: 'grains', price: 45, unit: 'kg', isWeightItem: true, img: 'https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'g4', name: 'सूजी (Sooji / Rava)', hindi: 'सूजी', category: 'grains', price: 40, unit: 'kg', isWeightItem: true, img: 'https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'g5', name: 'बेसन (Besan / Gram Flour)', hindi: 'बेसन', category: 'grains', price: 80, unit: 'kg', isWeightItem: true, img: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'g6', name: 'अरहर / तुअर दाल (Toor Dal)', hindi: 'अरहर दाल', category: 'grains', price: 155, unit: 'kg', isWeightItem: true, img: 'https://images.unsplash.com/photo-1585994192701-f2f79024f0c7?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'g7', name: 'चना दाल (Chana Dal)', hindi: 'चना दाल', category: 'grains', price: 90, unit: 'kg', isWeightItem: true, img: 'https://images.unsplash.com/photo-1585994192701-f2f79024f0c7?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'g8', name: 'मूंग दाल (Moong Dal)', hindi: 'मूंग दाल', category: 'grains', price: 110, unit: 'kg', isWeightItem: true, img: 'https://images.unsplash.com/photo-1585994192701-f2f79024f0c7?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'g9', name: 'मसूर दाल (Masoor Dal)', hindi: 'मसूर दाल', category: 'grains', price: 85, unit: 'kg', isWeightItem: true, img: 'https://images.unsplash.com/photo-1585994192701-f2f79024f0c7?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'g10', name: 'राजमा (Rajma)', hindi: 'राजमा', category: 'grains', price: 130, unit: 'kg', isWeightItem: true, img: 'https://images.unsplash.com/photo-1515543237350-b3eea1ec8082?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'g11', name: 'काबुली चना / छोले (Chole)', hindi: 'छोले', category: 'grains', price: 120, unit: 'kg', isWeightItem: true, img: 'https://images.unsplash.com/photo-1585994192701-f2f79024f0c7?auto=format&fit=crop&w=400&q=75', inStock: true },
+
+      // 4. तेल, मसाले और रसोई का सामान (Oils & Spices)
+      { id: 's1', name: 'सरसों का तेल (Mustard Oil)', hindi: 'सरसों का तेल', category: 'spices', price: 145, unit: 'litre', isWeightItem: false, img: 'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 's2', name: 'रिफाइंड तेल (Refined Oil)', hindi: 'रिफाइंड तेल', category: 'spices', price: 125, unit: 'litre', isWeightItem: false, img: 'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 's3', name: 'शुद्ध देशी घी (Pure Desi Ghee)', hindi: 'घी', category: 'spices', price: 580, unit: 'litre', isWeightItem: false, img: 'https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 's4', name: 'टाटा नमक (Iodised Salt)', hindi: 'नमक', category: 'spices', price: 28, unit: 'packet', isWeightItem: false, img: 'https://images.unsplash.com/photo-1518110925495-5fe2fda0442c?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 's5', name: 'सफ़ेद चीनी (Sugar)', hindi: 'चीनी', category: 'spices', price: 44, unit: 'kg', isWeightItem: true, img: 'https://images.unsplash.com/photo-1581441363689-1f3c3c414635?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 's6', name: 'देसी गुड़ (Jaggery)', hindi: 'गुड़', category: 'spices', price: 50, unit: 'kg', isWeightItem: true, img: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 's7', name: 'हल्दी पाउडर (Turmeric Powder 200g)', hindi: 'हल्दी', category: 'spices', price: 55, unit: 'packet', isWeightItem: false, img: 'https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 's8', name: 'लाल मिर्च पाउडर (Red Chilli Powder 200g)', hindi: 'लाल मिर्च', category: 'spices', price: 65, unit: 'packet', isWeightItem: false, img: 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 's9', name: 'धनिया पाउडर (Coriander Powder 200g)', hindi: 'धनिया पाउडर', category: 'spices', price: 50, unit: 'packet', isWeightItem: false, img: 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 's10', name: 'साबुत जीरा (Jeera / Cumin Seeds 100g)', hindi: 'जीरा', category: 'spices', price: 40, unit: 'packet', isWeightItem: false, img: 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 's11', name: 'गरम मसाला (Garam Masala 100g)', hindi: 'गरम मसाला', category: 'spices', price: 45, unit: 'packet', isWeightItem: false, img: 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 's12', name: 'शुद्ध हींग (Asafoetida / Hing 25g)', hindi: 'हींग', category: 'spices', price: 60, unit: 'piece', isWeightItem: false, img: 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=400&q=75', inStock: true },
+
+      // 5. स्नैक्स और दैनिक खाद्य (Snacks & Daily Food)
+      { id: 'sn1', name: 'चाय पत्ती (Tea 250g)', hindi: 'चाय पत्ती', category: 'snacks', price: 110, unit: 'packet', isWeightItem: false, img: 'https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'sn2', name: 'पारले-जी / बिस्कुट (Biscuits Pack)', hindi: 'बिस्कुट', category: 'snacks', price: 30, unit: 'packet', isWeightItem: false, img: 'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'sn3', name: 'मिक्स नमकीन (Namkeen 400g)', hindi: 'नमकीन', category: 'snacks', price: 75, unit: 'packet', isWeightItem: false, img: 'https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'sn4', name: 'मैगी नूडल्स (Noodles 4-Pack)', hindi: 'नूडल्स', category: 'snacks', price: 55, unit: 'packet', isWeightItem: false, img: 'https://images.unsplash.com/photo-1612927601601-6638404737ce?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'sn5', name: 'कॉफी पाउडर (Coffee Jar 50g)', hindi: 'कॉफी', category: 'snacks', price: 95, unit: 'piece', isWeightItem: false, img: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'sn6', name: 'टोमैटो सॉस (Tomato Ketchup 500g)', hindi: 'सॉस', category: 'snacks', price: 80, unit: 'piece', isWeightItem: false, img: 'https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=400&q=75', inStock: true },
+
+      // 6. घरेलू और पर्सनल केयर प्रोडक्ट्स (Household & Personal Care)
+      { id: 'h1', name: 'नहाने का साबुन (Bathing Soap 4-Pack)', hindi: 'साबुन', category: 'household', price: 120, unit: 'packet', isWeightItem: false, img: 'https://images.unsplash.com/photo-1607006314592-75d5069a2399?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'h2', name: 'डिटर्जेंट पाउडर (Detergent Powder 1kg)', hindi: 'डिटर्जेंट पाउडर', category: 'household', price: 110, unit: 'kg', isWeightItem: false, img: 'https://images.unsplash.com/photo-1585832770485-e68a5dbfad52?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'h3', name: 'बर्तन धोने का बार (Dishwash Bar 3-Pack)', hindi: 'बर्तन धोने का साबुन', category: 'household', price: 45, unit: 'packet', isWeightItem: false, img: 'https://images.unsplash.com/photo-1585832770485-e68a5dbfad52?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'h4', name: 'टूथपेस्ट (Toothpaste 150g)', hindi: 'टूथपेस्ट', category: 'household', price: 85, unit: 'piece', isWeightItem: false, img: 'https://images.unsplash.com/photo-1559599101-f09722fb4948?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'h5', name: 'शैम्पू बॉटल (Shampoo 180ml)', hindi: 'शैम्पू', category: 'household', price: 135, unit: 'piece', isWeightItem: false, img: 'https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?auto=format&fit=crop&w=400&q=75', inStock: true },
+      { id: 'h6', name: 'फिनाइल / फ्लोर क्लीनर (Floor Cleaner 1L)', hindi: 'फिनाइल', category: 'household', price: 75, unit: 'litre', isWeightItem: false, img: 'https://images.unsplash.com/photo-1585832770485-e68a5dbfad52?auto=format&fit=crop&w=400&q=75', inStock: true }
+    ];
+
+    // --- APPLICATION STATE ---
+    let currentCategory = 'all';
+    let searchQuery = '';
+    let sortMode = 'default';
+    let cart = []; // Array of { id, name, unitLabel, quantity, pricePerUnit, totalPrice, isWeightItem }
+
+    // Init function on load
+    document.addEventListener('DOMContentLoaded', () => {
+      updateCategoryCounts();
+      renderProducts();
+      updateCartUI();
+    });
+
+    // --- CATEGORY & SEARCH FILTERING ---
+    function updateCategoryCounts() {
+      document.getElementById('count-all').textContent = productsData.length;
+      const categories = ['vegetables', 'fruits', 'grains', 'spices', 'snacks', 'household'];
+      categories.forEach(cat => {
+        const count = productsData.filter(p => p.category === cat).length;
+        const el = document.getElementById(`count-${cat}`);
+        if (el) el.textContent = count;
+      });
+    }
+
+    function filterCategory(cat) {
+      currentCategory = cat;
+      // Update UI active buttons
+      document.querySelectorAll('.cat-pill').forEach(btn => {
+        btn.classList.remove('bg-emerald-700', 'text-white', 'shadow-sm');
+        btn.classList.add('bg-slate-100', 'text-slate-700');
+      });
+      const activeBtn = document.getElementById(`btn-${cat}`);
+      if (activeBtn) {
+        activeBtn.classList.remove('bg-slate-100', 'text-slate-700');
+        activeBtn.classList.add('bg-emerald-700', 'text-white', 'shadow-sm');
+      }
+
+      // Update section header title
+      const titleMap = {
+        all: 'सभी उपलब्ध प्रोडक्ट्स (All Products)',
+        vegetables: '🥬 ताज़ी हरी सब्ज़ियाँ (Fresh Vegetables)',
+        fruits: '🍎 ताज़े फल (Fresh Fruits)',
+        grains: '🌾 अनाज और दालें (Grains & Pulses)',
+        spices: '🫙 तेल, मसाले और रसोई का सामान (Spices & Oils)',
+        snacks: '☕ स्नैक्स और दैनिक खाद्य (Snacks & Daily Food)',
+        household: '🧼 घरेलू और पर्सनल केयर प्रोडक्ट्स (Household & Care)'
+      };
+      document.getElementById('currentCategoryTitle').textContent = titleMap[cat] || 'प्रोडक्ट्स';
+
+      renderProducts();
+    }
+
+    function handleSearch(val) {
+      searchQuery = val.trim().toLowerCase();
+      // Keep mobile and desktop inputs in sync
+      const mSearch = document.getElementById('mobileSearch');
+      const dSearch = document.getElementById('desktopSearch');
+      if (mSearch && mSearch.value !== val) mSearch.value = val;
+      if (dSearch && dSearch.value !== val) dSearch.value = val;
+
+      const clearBtn = document.getElementById('clearSearchBtn');
+      if (clearBtn) {
+        if (searchQuery.length > 0) clearBtn.classList.remove('hidden');
+        else clearBtn.classList.add('hidden');
+      }
+
+      const statusBox = document.getElementById('filterStatus');
+      const statusText = document.getElementById('filterStatusText');
+      if (searchQuery.length > 0) {
+        statusBox.classList.remove('hidden');
+        statusText.innerHTML = `खोज परिणाम: "<strong>${searchQuery}</strong>" के लिए`;
+      } else {
+        statusBox.classList.add('hidden');
+      }
+
+      renderProducts();
+    }
+
+    function clearSearch() {
+      searchQuery = '';
+      const mSearch = document.getElementById('mobileSearch');
+      const dSearch = document.getElementById('desktopSearch');
+      if (mSearch) mSearch.value = '';
+      if (dSearch) dSearch.value = '';
+      const clearBtn = document.getElementById('clearSearchBtn');
+      if (clearBtn) clearBtn.classList.add('hidden');
+      document.getElementById('filterStatus').classList.add('hidden');
+      renderProducts();
+    }
+
+    function handleSort(mode) {
+      sortMode = mode;
+      renderProducts();
+    }
+
+    function resetFilters() {
+      currentCategory = 'all';
+      searchQuery = '';
+      sortMode = 'default';
+      document.getElementById('priceSort').value = 'default';
+      clearSearch();
+      filterCategory('all');
+    }
+
+    function scrollToProducts() {
+      const el = document.getElementById('products-section');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // --- RENDER PRODUCTS GRID ---
+    function renderProducts() {
+      const grid = document.getElementById('productGrid');
+      const noFound = document.getElementById('noProductsFound');
+
+      let filtered = productsData.filter(item => {
+        const matchesCategory = (currentCategory === 'all' || item.category === currentCategory);
+        const matchesSearch = !searchQuery || 
+          item.name.toLowerCase().includes(searchQuery) || 
+          item.hindi.toLowerCase().includes(searchQuery);
+        return matchesCategory && matchesSearch;
+      });
+
+      // Sorting
+      if (sortMode === 'low-to-high') {
+        filtered.sort((a, b) => a.price - b.price);
+      } else if (sortMode === 'high-to-low') {
+        filtered.sort((a, b) => b.price - a.price);
+      } else if (sortMode === 'name') {
+        filtered.sort((a, b) => a.name.localeCompare(b.name, 'hi'));
+      }
+
+      if (filtered.length === 0) {
+        grid.innerHTML = '';
+        noFound.classList.remove('hidden');
+        return;
+      }
+
+      noFound.classList.add('hidden');
+
+      grid.innerHTML = filtered.map(product => {
+        const isVeg = product.category === 'vegetables' || product.category === 'fruits';
+        const badgeColor = isVeg ? 'badge-veg' : 'badge-kirana';
+        const badgeText = isVeg ? 'ताज़ा स्टॉक' : 'किराना';
+
+        return `
+          <div class="bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col overflow-hidden group">
+            
+            <!-- Image Frame -->
+            <div class="relative h-44 sm:h-48 overflow-hidden bg-slate-100">
+              <img src="${product.img}" alt="${product.name}" 
+                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                loading="lazy">
+              
+              <!-- Badges -->
+              <div class="absolute top-2.5 left-2.5 flex flex-col gap-1">
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded-full ${badgeColor} shadow-xs">
+                  ${badgeText}
+                </span>
+              </div>
+
+              <div class="absolute top-2.5 right-2.5">
+                <span class="text-[11px] font-bold px-2 py-0.5 rounded-md bg-white/90 text-slate-800 backdrop-blur-xs shadow-xs">
+                  ₹${product.price} / ${product.unit}
+                </span>
+              </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+              <div>
+                <h3 class="font-bold text-slate-900 text-base hindi-text group-hover:text-emerald-700 transition">
+                  ${product.name}
+                </h3>
+                <div class="flex items-center gap-1.5 text-xs text-slate-500 mt-1">
+                  <span>कीमत:</span>
+                  <span class="font-extrabold text-slate-900 text-sm">₹${product.price}</span>
+                  <span class="text-slate-400">/ प्रति ${product.unit}</span>
+                </div>
+              </div>
+
+              <!-- Weight / Unit Quantity Selector & Add Button -->
+              <div class="pt-2 border-t border-slate-100 space-y-2.5">
+                
+                ${product.isWeightItem ? `
+                  <div>
+                    <label class="block text-[11px] font-semibold text-slate-500 mb-1 hindi-text">वज़न चुनें (Select Weight):</label>
+                    <div class="grid grid-cols-3 gap-1.5 text-xs">
+                      <button type="button" onclick="selectCardOption('${product.id}', 0.25, '250 g', this)" 
+                        class="opt-btn-${product.id} py-1.5 px-2 rounded-lg border border-slate-200 text-center font-bold text-slate-700 hover:bg-slate-50 transition">
+                        250 g
+                      </button>
+                      <button type="button" onclick="selectCardOption('${product.id}', 0.5, '500 g', this)" 
+                        class="opt-btn-${product.id} py-1.5 px-2 rounded-lg border border-slate-200 text-center font-bold text-slate-700 hover:bg-slate-50 transition">
+                        500 g
+                      </button>
+                      <button type="button" onclick="selectCardOption('${product.id}', 1, '1 kg', this)" 
+                        class="opt-btn-${product.id} active-opt py-1.5 px-2 rounded-lg border border-emerald-600 bg-emerald-50 text-emerald-800 text-center font-bold transition">
+                        1 kg
+                      </button>
+                    </div>
+                  </div>
+                ` : `
+                  <div class="flex items-center justify-between text-xs text-slate-600 bg-slate-50 p-1.5 rounded-lg">
+                    <span class="hindi-text font-medium">मात्रा (Pack/Unit):</span>
+                    <span class="font-bold text-slate-800">1 ${product.unit}</span>
+                  </div>
+                `}
+
+                <!-- Add To Cart Action -->
+                <button onclick="addToCart('${product.id}')" 
+                  class="w-full bg-emerald-700 hover:bg-emerald-800 text-white font-bold py-2.5 px-3 rounded-xl transition flex items-center justify-center gap-2 text-xs md:text-sm hindi-text shadow-sm active:scale-98">
+                  <i class="fa-solid fa-plus text-xs"></i> कार्ट में जोड़ें (Add to Cart)
+                </button>
+
+              </div>
+
+            </div>
+
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Storage for selected weight options per card
+    const cardSelectedWeights = {};
+
+    function selectCardOption(productId, multiplier, label, btnEl) {
+      cardSelectedWeights[productId] = { multiplier, label };
+      // Update buttons style
+      const allBtns = document.querySelectorAll(`.opt-btn-${productId}`);
+      allBtns.forEach(b => {
+        b.classList.remove('border-emerald-600', 'bg-emerald-50', 'text-emerald-800');
+        b.classList.add('border-slate-200', 'text-slate-700');
+      });
+      btnEl.classList.remove('border-slate-200', 'text-slate-700');
+      btnEl.classList.add('border-emerald-600', 'bg-emerald-50', 'text-emerald-800');
+    }
+
+    // --- CART MANAGEMENT ---
+    function addToCart(productId) {
+      const product = productsData.find(p => p.id === productId);
+      if (!product) return;
+
+      let selectedMultiplier = 1;
+      let unitLabel = product.unit;
+
+      if (product.isWeightItem) {
+        const custom = cardSelectedWeights[productId] || { multiplier: 1, label: '1 kg' };
+        selectedMultiplier = custom.multiplier;
+        unitLabel = custom.label;
+      }
+
+      // Unique cart item identifier based on product ID and unit/weight
+      const cartItemId = `${product.id}_${unitLabel}`;
+      const itemPrice = Math.round(product.price * selectedMultiplier);
+
+      const existingIndex = cart.findIndex(c => c.cartItemId === cartItemId);
+      if (existingIndex > -1) {
+        cart[existingIndex].count += 1;
+      } else {
+        cart.push({
+          cartItemId: cartItemId,
+          productId: product.id,
+          name: product.name,
+          unitLabel: unitLabel,
+          count: 1,
+          pricePerUnit: itemPrice,
+          isWeightItem: product.isWeightItem,
+          img: product.img
+        });
+      }
+
+      updateCartUI();
+      showToast(`${product.name} (${unitLabel}) कार्ट में जोड़ा गया!`);
+    }
+
+    function modifyCartCount(cartItemId, delta) {
+      const idx = cart.findIndex(c => c.cartItemId === cartItemId);
+      if (idx === -1) return;
+
+      cart[idx].count += delta;
+      if (cart[idx].count <= 0) {
+        cart.splice(idx, 1);
+      }
+      updateCartUI();
+    }
+
+    function removeCartItem(cartItemId) {
+      cart = cart.filter(c => c.cartItemId !== cartItemId);
+      updateCartUI();
+      showToast('सामान कार्ट से हटा दिया गया');
+    }
+
+    function clearCart() {
+      if (cart.length === 0) return;
+      if (confirm('क्या आप सचमुच कार्ट खाली करना चाहते हैं?')) {
+        cart = [];
+        updateCartUI();
+        showToast('कार्ट खाली कर दी गई');
+      }
+    }
+
+    function calculateCartTotals() {
+      let totalItems = 0;
+      let totalAmount = 0;
+      cart.forEach(item => {
+        totalItems += item.count;
+        totalAmount += (item.pricePerUnit * item.count);
+      });
+      return { totalItems, totalAmount };
+    }
+
+    function updateCartUI() {
+      const { totalItems, totalAmount } = calculateCartTotals();
+
+      // Badges & Counters
+      const badge = document.getElementById('cartBadge');
+      const drawerCount = document.getElementById('drawerCartCount');
+      const footerCount = document.getElementById('footerItemCount');
+      const floatingTotal = document.getElementById('floatingCartTotal');
+      const floatingCount = document.getElementById('floatingCartCount');
+      const drawerTotal = document.getElementById('drawerTotal');
+
+      if (badge) badge.textContent = totalItems;
+      if (drawerCount) drawerCount.textContent = totalItems;
+      if (footerCount) footerCount.textContent = totalItems;
+      if (floatingTotal) floatingTotal.textContent = totalAmount;
+      if (floatingCount) floatingCount.textContent = totalItems;
+      if (drawerTotal) drawerTotal.textContent = totalAmount;
+
+      // Drawer Items View
+      const itemsList = document.getElementById('cartItemsList');
+      const emptyView = document.getElementById('emptyCartView');
+      const footerView = document.getElementById('cartFooter');
+
+      if (cart.length === 0) {
+        if (itemsList) itemsList.innerHTML = '';
+        if (emptyView) emptyView.classList.remove('hidden');
+        if (footerView) footerView.classList.add('hidden');
+      } else {
+        if (emptyView) emptyView.classList.add('hidden');
+        if (footerView) footerView.classList.remove('hidden');
+
+        if (itemsList) {
+          itemsList.innerHTML = cart.map(item => `
+            <div class="bg-white p-3 rounded-2xl border border-slate-200 shadow-xs flex items-center justify-between gap-3">
+              <div class="w-12 h-12 rounded-xl bg-slate-100 overflow-hidden shrink-0">
+                <img src="${item.img}" alt="${item.name}" class="w-full h-full object-cover">
+              </div>
+              <div class="flex-1 min-w-0">
+                <h4 class="font-bold text-xs sm:text-sm text-slate-900 truncate hindi-text">${item.name}</h4>
+                <div class="flex items-center gap-2 text-xs text-slate-500 mt-0.5">
+                  <span class="bg-slate-100 px-1.5 py-0.5 rounded text-[11px] font-semibold text-slate-700">${item.unitLabel}</span>
+                  <span class="font-extrabold text-emerald-800">₹${item.pricePerUnit * item.count}</span>
+                </div>
+              </div>
+
+              <!-- Quantity Controls -->
+              <div class="flex items-center gap-1.5 shrink-0">
+                <button onclick="modifyCartCount('${item.cartItemId}', -1)" 
+                  class="w-7 h-7 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold flex items-center justify-center transition">
+                  <i class="fa-solid fa-minus text-xs"></i>
+                </button>
+                <span class="w-6 text-center font-extrabold text-xs text-slate-800">${item.count}</span>
+                <button onclick="modifyCartCount('${item.cartItemId}', 1)" 
+                  class="w-7 h-7 rounded-lg bg-emerald-100 hover:bg-emerald-200 text-emerald-800 font-bold flex items-center justify-center transition">
+                  <i class="fa-solid fa-plus text-xs"></i>
+                </button>
+                <button onclick="removeCartItem('${item.cartItemId}')" 
+                  class="w-7 h-7 rounded-lg text-red-500 hover:bg-red-50 flex items-center justify-center transition ml-1">
+                  <i class="fa-regular fa-trash-can text-xs"></i>
+                </button>
+              </div>
+            </div>
+          `).join('');
+        }
+      }
+    }
+
+    // Drawer Controls
+    function toggleCartDrawer(open) {
+      const drawer = document.getElementById('cartDrawer');
+      const backdrop = document.getElementById('cartDrawerBackdrop');
+      if (open) {
+        backdrop.classList.remove('hidden');
+        drawer.classList.remove('translate-x-full');
+        document.body.classList.add('overflow-hidden');
+      } else {
+        drawer.classList.add('translate-x-full');
+        backdrop.classList.add('hidden');
+        document.body.classList.remove('overflow-hidden');
+      }
+    }
+
+    function toggleMobileNav() {
+      const menu = document.getElementById('mobileNavMenu');
+      const icon = document.getElementById('menuIcon');
+      menu.classList.toggle('hidden');
+      if (menu.classList.contains('hidden')) {
+        icon.className = 'fa-solid fa-bars text-xl';
+      } else {
+        icon.className = 'fa-solid fa-xmark text-xl';
+      }
+    }
+
+    // --- CHECKOUT & WHATSAPP MESSAGE GENERATION ---
+    function openCheckoutModal() {
+      if (cart.length === 0) {
+        alert('कृपया पहले कोई सामान कार्ट में जोड़ें।');
+        return;
+      }
+      toggleCartDrawer(false);
+      const { totalItems, totalAmount } = calculateCartTotals();
+      document.getElementById('modalItemCount').textContent = totalItems;
+      document.getElementById('modalTotalAmount').textContent = totalAmount;
+      document.getElementById('checkoutModal').classList.remove('hidden');
+    }
+
+    function closeCheckoutModal() {
+      document.getElementById('checkoutModal').classList.add('hidden');
+    }
+
+    function toggleAddressField(show) {
+      const container = document.getElementById('addressFieldContainer');
+      const addrInput = document.getElementById('custAddress');
+      if (show) {
+        container.classList.remove('hidden');
+        addrInput.setAttribute('required', 'true');
+      } else {
+        container.classList.add('hidden');
+        addrInput.removeAttribute('required');
+      }
+    }
+
+    function handleSendWhatsAppOrder(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('custName').value.trim();
+      const phone = document.getElementById('custPhone').value.trim();
+      const deliveryChoice = document.querySelector('input[name="deliveryType"]:checked').value;
+      const address = document.getElementById('custAddress').value.trim();
+      const notes = document.getElementById('custNotes').value.trim();
+
+      const { totalItems, totalAmount } = calculateCartTotals();
+
+      // Format WhatsApp Message neatly as per Section 8 specification
+      let message = `🛒 *नया आर्डर अनुरोध (New Order Request)*\n`;
+      message += `🏪 *दुकान:* संतोष किराना स्टोर & ताज़ी सब्ज़ियाँ\n`;
+      message += `----------------------------------------\n`;
+      message += `👤 *ग्राहक का नाम:* ${name}\n`;
+      message += `📞 *मोबाइल नंबर:* ${phone}\n`;
+      message += `🚚 *ऑर्डर प्रकार:* ${deliveryChoice}\n`;
+      if (deliveryChoice.includes('होम डिलीवरी') && address) {
+        message += `📍 *डिलीवरी का पता:* ${address}\n`;
+      }
+      if (notes) {
+        message += `📝 *निर्देश:* ${notes}\n`;
+      }
+      message += `----------------------------------------\n`;
+      message += `📦 *ऑर्डर का सामान (Ordered Items):*\n`;
+
+      cart.forEach((item, idx) => {
+        const itemLineTotal = item.pricePerUnit * item.count;
+        message += `${idx + 1}. ${item.name} (${item.unitLabel}) x ${item.count} = ₹${itemLineTotal}\n`;
+      });
+
+      message += `----------------------------------------\n`;
+      message += `📊 *कुल वस्तुएं:* ${totalItems}\n`;
+      message += `💰 *अनुमानित कुल राशि:* ₹${totalAmount}\n\n`;
+      message += `⚠️ *नोट:* यह आर्डर अनुरोध है। सामान की वास्तविक उपलब्धता, सब्ज़ियों के अंतिम तौल एवं कुल राशि की पुष्टि दुकान द्वारा की जाएगी।`;
+
+      // Safe URL encoding
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappURL = `https://wa.me/916260274239?text=${encodedMessage}`;
+
+      // Open WhatsApp chat in new window
+      window.open(whatsappURL, '_blank');
+
+      closeCheckoutModal();
+      showToast('WhatsApp आर्डर तैयार! संदेश भेजा जा रहा है...');
+    }
+
+    // --- TOAST NOTIFICATIONS ---
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toastMessage');
+      toastMsg.textContent = msg;
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-24', 'opacity-0');
+      }, 3000);
+    }
+  </script>
+</body>
+</html>
